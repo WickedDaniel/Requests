@@ -1,4 +1,5 @@
 game.workspace:WaitForChild("__MAP")
+getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 = false
 repeat wait(1) until game:GetService('ContentProvider').RequestQueueSize < 1
 local HeadShot, ready = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 = true
