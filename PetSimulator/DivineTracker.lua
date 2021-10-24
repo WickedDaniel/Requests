@@ -74,6 +74,7 @@ local peticonimage = "rbxassetid://7799128977" local image = peticonimage:gsub("
         });
 end
 coroutine.wrap(function()
+local Library = require(game:GetService("ReplicatedStorage").Framework.Library)
 if not getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 then return end
 infoweb()
 getgenv().SinceLastCollected = "Unknown"
