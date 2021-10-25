@@ -1,6 +1,7 @@
 game.workspace:WaitForChild("__MAP")
 getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 = false
 repeat wait(1) until game:GetService('ContentProvider').RequestQueueSize < 1
+getgevn().Time = 0
 local HeadShot, ready = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 = true
 function infoweb()
@@ -15,6 +16,7 @@ function infoweb()
         ["color"] = tonumber("10940962"); 
         ["thumbnail"] = {["url"] = "https://media.discordapp.net/attachments/854170869579382795/901884280521785445/pngegg.png"};
         ["fields"] = {
+        ["footer"] = {["text"] = tostring(Time) .. " Minutes"};
         { ["name"] = "> **Rank Rewards tracker:      **"; ["value"] = "```" .. tostring(t) .. "```"; ["inline"] = true; };
         { ["name"] = "> **Halloween Candy tracker:      **"; ["value"] = "```" .. tostring(t) .. "```"; ["inline"] = true; };
         };
@@ -62,6 +64,7 @@ local peticonimage = "rbxassetid://7799128977" local image = peticonimage:gsub("
         ["color"] = tonumber("10047689"); 
         ["thumbnail"] = {["url"] = image;};
         ["fields"] = {
+        
         { ["name"] = "**Earned in the last 60 seconds:**"; ["value"] = tostring(t); ["inline"] = true; };
         { ["name"] = "**Earned in this session:**"; ["value"] = tostring(t2); ["inline"] = false; };
         { ["name"] = "**Starting value:**"; ["value"] = tostring(t3); ["inline"] = false; };
@@ -85,6 +88,7 @@ local SHC = game:GetService("Players").DivineEntity01.PlayerGui.Main.Right["Hall
 while getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 do
 local Seconds = os.time()
 if (Seconds % 60 == 0) then 
+getgenv().Time = getgenv().Time + 1
 if getgenv().Rank then
         local Library = require(game:GetService("ReplicatedStorage").Framework.Library) local Save = Library.Save.Get()
         local OC = os.clock() local CD = Library.Directory.Ranks[Save.Rank].rewardCooldown - (Library.Network.Invoke("Get OSTime") + (OC - os.clock()) - Save.RankTimer)
