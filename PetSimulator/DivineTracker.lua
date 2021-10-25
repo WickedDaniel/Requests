@@ -45,7 +45,6 @@ local peticonimage = "rbxassetid://7402604294" local image = peticonimage:gsub("
         { ["name"] = "> **Super Lucky     **"; ["value"] = "```" .. tostring(sp) .. "```" ; ["inline"] = true; };
         { ["name"] = "> **Ultra Lucky     **"; ["value"] = "```" .. tostring(ul) .. "```" ; ["inline"] = true; };
         { ["name"] = "> **Triple Coins     **"; ["value"] = "```" .. tostring(tc) .. "```" ; ["inline"] = true; };
-	["footer"] = {["text"] = tostring(getgenv().Time) .. " Minutes"};
         };
         }}
         ;}
@@ -63,8 +62,8 @@ local peticonimage = "rbxassetid://7799128977" local image = peticonimage:gsub("
         ["title"] = "Halloween Candy (" .. tostring(game:GetService("Players").DivineEntity01.PlayerGui.Main.Right["Halloween Candy"].Amount.Text) .. ")"; 
         ["color"] = tonumber("10047689"); 
         ["thumbnail"] = {["url"] = image;};
+	["footer"] = {["text"] = tostring(getgenv().Time) .. " Minutes"};
         ["fields"] = {
-        
         { ["name"] = "**Earned in the last 60 seconds:**"; ["value"] = tostring(t); ["inline"] = true; };
         { ["name"] = "**Earned in this session:**"; ["value"] = tostring(t2); ["inline"] = false; };
         { ["name"] = "**Starting value:**"; ["value"] = tostring(t3); ["inline"] = false; };
