@@ -16,7 +16,6 @@ function infoweb()
         ["color"] = tonumber("10940962"); 
         ["thumbnail"] = {["url"] = "https://media.discordapp.net/attachments/854170869579382795/901884280521785445/pngegg.png"};
         ["fields"] = {
-        ["footer"] = {["text"] = tostring(Time) .. " Minutes"};
         { ["name"] = "> **Rank Rewards tracker:      **"; ["value"] = "```" .. tostring(t) .. "```"; ["inline"] = true; };
         { ["name"] = "> **Halloween Candy tracker:      **"; ["value"] = "```" .. tostring(t) .. "```"; ["inline"] = true; };
         };
@@ -46,6 +45,7 @@ local peticonimage = "rbxassetid://7402604294" local image = peticonimage:gsub("
         { ["name"] = "> **Super Lucky     **"; ["value"] = "```" .. tostring(sp) .. "```" ; ["inline"] = true; };
         { ["name"] = "> **Ultra Lucky     **"; ["value"] = "```" .. tostring(ul) .. "```" ; ["inline"] = true; };
         { ["name"] = "> **Triple Coins     **"; ["value"] = "```" .. tostring(tc) .. "```" ; ["inline"] = true; };
+	["footer"] = {["text"] = tostring(getgenv().Time) .. " Minutes"};
         };
         }}
         ;}
