@@ -59,7 +59,7 @@ local peticonimage = "rbxassetid://7799128977" local image = peticonimage:gsub("
         local image = image.format("https://www.roblox.com/asset-thumbnail/image?assetId=%d&width=420&height=420&format=png", image)
         local data = {["content"] = ""; 
         ["embeds"] = {{
-        ["title"] = "Halloween Candy (" .. tostring(game:GetService("Players").DivineEntity01.PlayerGui.Main.Right["Halloween Candy"].Amount.Text) .. ")"; 
+        ["title"] = "Halloween Candy (" .. tostring(game:GetService("Players").LocalPlayer.PlayerGui.Main.Right["Halloween Candy"].Amount.Text) .. ")"; 
         ["color"] = tonumber("10047689"); 
         ["thumbnail"] = {["url"] = image;};
 	["footer"] = {["text"] = tostring(getgenv().Time) .. " Minutes"};
@@ -83,7 +83,7 @@ getgenv().SinceLastCollected = "Unknown"
 getgenv().TimesCollected = 0
 getgenv().EarnedTotal = 0
 getgenv().OldCandy = Library.Save.Get()["Halloween Candy"]
-local SHC = game:GetService("Players").DivineEntity01.PlayerGui.Main.Right["Halloween Candy"].Amount.Text
+local SHC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right["Halloween Candy"].Amount.Text
 while getgenv().HU4fSnoKBPrOyf4asTdZd9tkgTsqvAGDr7hHAhxU649SYT11vNNYEuNmCW5lHWNZAru5 do
 local Seconds = os.time()
 if (Seconds % 60 == 0) then 
