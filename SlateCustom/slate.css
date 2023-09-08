@@ -1,0 +1,47 @@
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+#app-mount .navItem-3McpmW[aria-controls] {
+  padding: 2px 8px;
+  width: auto;
+  height: auto;
+  transition: none;
+  cursor: var(--cursor);
+  border-radius: var(--border-radius);
+}
+
+.diversitySelector-P-W_tU {
+  display: none;
+}
+
+.header-2TLOnc, .header-uVCAlo, .header-11eigE {
+  margin-left: 250px;
+}
+
+.banner-1YaD3N {
+  scale: 1;
+}
+
+.svg-lIB-lq foreignObject{
+  mask:none;
+}
+
+#app-mount .wrapper-3Un6-K rect{
+  rx: 0;
+  z-index: 1000;
+}
+
+#app-mount .wrapper-3Un6-K[style^="width: 80"] rect {
+  y: 79;
+  x: 1;
+}
+
+.pointerEvents-2KjWnj {
+  height: 5px;
+  width: 78px;
+}
+
+#app-mount .root-8LYsGj {
+  width: auto;
+}
