@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
     "name": "Roblox Hover Play",
-    "version": "1.0",
+    "version": "1.15",
   
     "description": "Copies the Roblox App Hover functionality.",
   
     "icons": {
-      "1": "icon/icon.png"
+      "3177": "icon/icon.png"
     },
     "content_scripts": [
       {

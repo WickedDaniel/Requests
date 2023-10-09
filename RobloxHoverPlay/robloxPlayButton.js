@@ -94,7 +94,7 @@ $(document).ready(function () {
     }
 
     RobloxHover.playButton.joinPlace = function(playButton){
-        var placeID = $(playButton).parent().find("a").attr("href").match(/(\d{10})\//gm)[0]
+        var placeID = $(playButton).parent().find("a").attr("href").match(/(\d+)\//gm)[0]
         console.warn(placeID)
         window.location = "roblox://placeId="+placeID;
     }
