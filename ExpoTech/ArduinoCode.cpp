@@ -1,25 +1,37 @@
-int buzzerPin = 8;
-int sensorPin = A0;
-bool turned = false;
+#include <Servo.h>
+#include <ezButton.h>
 
-void setup(){
-  pinMode(buzzerPin, OUTPUT);
-  pinMode(sensorPin, INPUT);
-  Serial.begin (9600);
+ezButton toggleSwitch(8);
+Servo myservo;
+
+// Setup section to run once
+void setup() {
+  Serial.begin(9600);
+  myservo.attach(9); // attach the servo to our servo object
+  toggleSwitch.setDebounceTime(50);
+  myservo.write(0); // stop the motor
 }
-  
-void loop (){
-  if(analogRead(sensorPin)> 80)
-  {
-    Serial.println("SNORING");
-    if(turned == false){
-     turned = true;
-     tone(buzzerPin, 10000, 5000);
-     delay(5000);
-     turned = false;
-    }
-  }
+
+// Loop to keep the motor turning!
+void loop() {
+  toggleSwitch.loop();
+  if (toggleSwitch.isPressed())
+    Serial.println("The switch: OFF -> ON");
+
+  if (toggleSwitch.isReleased())
+    Serial.println("The switch: ON -> OFF");
+
+  int state = toggleSwitch.getState();
+  if (state == HIGH)
+    Serial.println("The switch: OFF");
   else{
-    noTone(buzzerPin);
+    Serial.println("The switch: ON");
+    myservo.write(0); // rotate the motor counter-clockwise
+    delay(500); // keep rotating for 5 seconds (5000 milliseconds)
+    Serial.println(myservo.read());
+    myservo.write(180); // rotate the motor clockwise
+    delay(500); // keep rotating 😀
   }
+
+  
 }
