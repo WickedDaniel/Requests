@@ -1,13 +1,14 @@
 {
     "manifest_version": 2,
     "name": "Roblox Hover Play",
-    "version": "1.15",
+    "version": "1.2",
   
     "description": "Copies the Roblox App Hover functionality.",
   
     "icons": {
       "3177": "icon/icon.png"
     },
+    "permissions": ["tabs"], 
     "content_scripts": [
       {
         "matches": ["https://www.roblox.com/home"],
